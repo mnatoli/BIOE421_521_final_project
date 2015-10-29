@@ -7,10 +7,11 @@
 #10/29/2015
  - 	Wire up ultrasonic detector and verify proper conversion of voltage to range
  - 	Create algorithm for detecting approaching object based on voltage differential
- - 	Prepare preliminary device for field testing and begin wiring second ultrasonic detector
+ - 	Program device to take picture as object approaches
 
 #11/5/2015
  - 	Complete Abstract
+ - 	Prepare preliminary device for field testing and begin wiring second ultrasonic detector
  - 	Trouble shoot any false positive triggers from field tests
  - 	If device is working properly, begin optimizing for field test data
 
