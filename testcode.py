@@ -35,7 +35,7 @@ def reading(sensor):
         
         # found that the sensor can crash if there isn't a delay here
         # no idea why. If you have odd crashing issues, increase delay
-        time.sleep(0.3)
+        time.sleep(5)
         
         # sensor manual says a pulse ength of 10Us will trigger the 
         # sensor to transmit 8 cycles of ultrasonic burst at 40kHz and 
@@ -110,4 +110,4 @@ def reading(sensor):
         print "Incorrect usonic() function varible."
 
         
-print reading(0)
+#print reading(0)

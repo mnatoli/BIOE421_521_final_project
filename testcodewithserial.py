@@ -8,6 +8,7 @@ import picamera
 import serial
 import time
 import os
+import sys
 from collections import deque
 
 ser = serial.Serial(
@@ -83,6 +84,8 @@ def reading(sensor):
 			approaching = 1
 			timestr = time.strftime("%m%d-%H%M%S")
 			print timestr
+#		approaching = 1
+#		timestr = time.strftime("%m%d-%H%M%S")
 		#delay between recordings to reduce power consumption
 		time.sleep(0.3)
 	time.sleep(.5)
@@ -150,11 +153,11 @@ def reading(sensor):
 		print (avgSideDistArray)
 		print >> open('/home/pi/BIOE421_521_final_project/' + timestr + '/' + timestr + '.txt', 'w'), avgSideDistArray
 		print >> open('/home/pi/BIOE421_521_final_project/' + timestr + '/' + timestr + '.txt', 'a'), medianBackDistArray
-		#print >> open('/home/pi/BIOE421_521_final_project/' + 'data.txt', 'a'), min(avgSideDistArray)
+		print >> open('/home/pi/BIOE421_521_final_project/' + 'data.txt', 'a'), min(avgSideDistArray)
 		#file1 = open ('/home/pi/BIOE421_521_final_project/' + timestr + '/' + timestr + '.txt', "w")
 		#file1.writelines(avgSideDistArray)
 		time.sleep(.5)	
-	print >> open('/home/pi/BIOE421_521_final_project/' + 'data.txt', 'a'), timestr + ',' + str(min(avgSideDistArray))		
+#	print >> open('/home/pi/BIOE421_521_final_project/' + 'data.txt', 'a'), timestr + ',' + str(min(avgSideDistArray))		
 	return avgSideDistArray
         GPIO.cleanup()
 
